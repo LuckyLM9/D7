@@ -1,0 +1,211 @@
+body{
+    font-family: Arial, Helvetica, sans-serif; /*famiglia caratteri*/
+    text-align: center; /*allineamento all'interno di un elemento*/
+    font-weight: 400; /*proprietà che specifica il peso dei caratteri*/
+    line-height: 28px;/*viene utilizzata per creare una spaziatura verticale*/
+    font-size: 16px;/*proprietà che specifica la dimensione dei caratteri*/
+}
+.container{
+    padding-top: 42px; /*padding top influisce soltanto nello spazio sopra il contenuto dell'elemento*/
+    padding-right: 42px;/*padding top influisce soltanto nello spazio destra il contenuto dell'elemento*/
+    padding-left: 42px;/*padding top influisce soltanto nello spazio sinistra il contenuto dell'elemento*/
+display: flex;
+}
+.filter{
+    display: flex; /*proprietà usata per disporre i contenuti in modo flessibile*/
+justify-content: space-between;/*uniforma lo spazio tra gli elementi all'interno del contenitore padre*/
+}
+.card_container{
+    display: flex;
+    flex-wrap: wrap; /*indica che gli elementi del contenitore padre devono essere disposti sulla stessa linea */
+    justify-content: space-between;
+}
+.card{
+    margin-right: 20px;/*proprietà che viene utilizzata per creare spazio tra gli eelementi*/
+
+}
+.card_info{
+    font-size: 12px;/*specifica le dimensioni del carattere*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /*proprietà che allinea gli elementi al centro sull'asse trasversale*/
+}
+h1 + p{
+margin-bottom: 12px;
+color: #6e6d7a;
+}
+
+p + ul{
+    display: flex;
+    flex-wrap: nowrap;/* specifica che gli ementi flessibili rimangono all'interno dell'elemento padre*/
+justify-content: center;
+margin-bottom: 8px;
+list-style: none;/* rimuove lo stile dall'elenco*/
+
+}
+p+ ul li{
+    font-size: 14px;
+line-height: 20px;
+margin-right: 16px;
+padding-bottom: 4px;
+color: pink;
+list-style: none;
+cursor: pointer;
+}
+p+ ul li:hover{
+    color: blue;
+}
+
+.filter ul{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+.filter ul filter{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    line-height: 20px;
+margin-right: 16px;
+padding-bottom: 4px;
+}
+.filter ul li{
+    padding: 5px 22px;
+    color: violet;
+    list-style: none;
+   flex-wrap: nowrap;
+justify-content: center;
+}
+.filter ul li:hover{
+    color: blue;
+    cursor: pointer;
+}
+.filter li:first-of-type{
+    border-radius: 8px; /*consente di arrotondare i bordi*/
+background: rgb(13, 12, 34, 0.5);
+font-weight: 600;
+
+}
+.filter li:hover{
+    background: #e7e7e9;
+    border-radius: 10px;
+}
+.filter div{
+    border-radius: 8px;
+    box-shadow: 0px,0px,0px,1px #e7e7e9 inset; /*consente di aggiungre un'effetto ombra ad un elemento*/
+    padding: 10px,16px;/* il padding viene utilizzato per aggiungere spazio all'interno di un elemento*/
+}
+.filter div span{
+    display: flex;
+}
+.card{
+    display: flex;
+    flex-direction: column;  
+    width: 400px;
+    height: 400px;
+    overflow:hidden;
+    border-radius: 20px;
+    margin: 20px; 
+    z-index: 1;
+}
+.card img{
+    width: 320px;
+    height: 255px;
+flex-wrap: wrap;
+flex-direction: column;
+}
+.card_info img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50px;
+    margin-right: 5px;
+    text-transform: uppercase;
+}
+
+.card_info img +span{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card_info div:last-of-type span{
+    margin-right: 5px;
+    text-transform: uppercase;/*utlilizzato per far apparire tutto il testo in maiuscolo*/
+}
+.wrap-copy{
+    position: relative;    
+    width: 100%;
+    height: 0px;
+    z-index: 2;
+    
+}
+.copy {
+    position: absolute;
+}
+.ico{
+    width: 24px;
+    height: 22px;
+    overflow: hidden;
+    object-fit: cover;
+    padding-right: 3px;
+    padding-left: 15px;
+    color: #554835;
+}
+.img-card:hover .copy{
+    opacity: 100%; 
+}
+
+.img-card{    
+    width: 100%;    
+    border-radius: 20px;
+}
+
+.img-card:hover{
+    filter:brightness(70%); 
+}
+
+.info{    
+    display: flex;
+    width: 100%;
+}
+
+.author{
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.user-logo{
+    width:35px;
+    height: 35px;
+}
+
+.user-name{
+    padding: 10px 6px;
+    font-weight: bold;
+}
+
+.user-class{
+    background-color: #cacaca;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0px 5px;
+    border-radius: 3px;
+}
+
+.data{
+    width: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.data span{
+    font-weight: bold;
+    font-size: 0.8rem;;
+}
+
+
+
